@@ -27,7 +27,7 @@ import org.sakaiproject.api.kernel.session.cover.SessionManager;
  */
 public class PortletSessionManagerImpl implements PortletSessionManager
 {
-    private static final String SESSION_COOKIE = "SakaiSessionId";
+    private static final String SESSION_COOKIE = "JSESSIONID";
 
     // log and trace support
     private Logger logger = LogManager.getLogManager().getLogger(this.getClass());
