@@ -18,6 +18,13 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+		    <groupId>maven</groupId>
+		    <artifactId>maven-war-plugin</artifactId>
+	    	<version>1.6.1</version>
+			<type>plugin</type>
+	    </dependency>
+	    
 		<!-- servlet -->
 		<dependency>
 			<groupId>servletapi</groupId>
