@@ -106,8 +106,13 @@ authorization done currently, work is under way to fix that.
 
 6. performBlockingInteraction -- Ditto as getMarkup. 
 
-Data persistence is not currently implemented, so all WSRP specific persistence is in-memory.
+The only data that is currently persisted is the consumer resigtration. List of supported Tools (portlets) is 
+fetched from Sakai and no separate persistence is required. Consumer configured portlets are not supported yet.
+The persistence of registration information is done using the default mechanism that is included with the
+WSRP4J code, which happens to be a Castor based XML file persistence. The persistence files are written in 
+WEB-INF/persistence directory, which will be overwritten if you re-deploy sakai-wsrp-producer, losing all
+consumer registrations.
  
 Data persisted by individual tools are not affected. Since portlet cloning is not currently implemented, the 
-only place where this seems painful is if you restart Sakai's WSRP producer, consumer will need to re-register!
+only place where this seems painful is if you re-deploy Sakai's WSRP producer, consumer will need to re-register!
 
