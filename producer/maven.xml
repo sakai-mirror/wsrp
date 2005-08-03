@@ -19,7 +19,6 @@
     <ant:echo message="Replacing @HTTPPORT@ with ${maven.tomcat.port}"/>
     
     <ant:replace file="${webinf.dir}/classes/wsrp4j-logger.properties"          token="@HOME@"     value="${maven.tomcat.home}"/>     
-    <ant:replace file="${webinf.dir}/server-config.wsdd"                        token="@HOME@"     value="${maven.tomcat.home}"/>                  
     <ant:replace file="${webinf.dir}/config/services/ConfigService.properties"  token="@HTTPPORT@" value="${maven.tomcat.port}"/>
   </goal>
 

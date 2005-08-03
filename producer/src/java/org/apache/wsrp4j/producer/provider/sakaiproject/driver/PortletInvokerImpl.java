@@ -249,10 +249,8 @@ public class PortletInvokerImpl implements PortletInvoker
         }
         else 
         {
-            // Set URL Handlers
-            ThreadLocalManager.set(ToolURL.RENDER_URL_CLASS, RenderURL.class);
-            ThreadLocalManager.set(ToolURL.ACTION_URL_CLASS, ActionURL.class);
-            ThreadLocalManager.set(ToolURL.RESOURCE_URL_CLASS, ResourceURL.class);
+            // Set URL Handlers           
+            req.setAttribute(ToolURL.MANAGER, new SakaiURLManager(req));
             ThreadLocalManager.set(ToolURL.HTTP_SERVLET_REQUEST, req);
             
             String context = "wsrp";
@@ -271,9 +269,6 @@ public class PortletInvokerImpl implements PortletInvoker
             }
             portlet.render(req, res, p);
             
-            ThreadLocalManager.set(ToolURL.RENDER_URL_CLASS, null);
-            ThreadLocalManager.set(ToolURL.ACTION_URL_CLASS, null);
-            ThreadLocalManager.set(ToolURL.RESOURCE_URL_CLASS, null);
             ThreadLocalManager.set(ToolURL.HTTP_SERVLET_REQUEST, null);
         } 
     }

@@ -34,7 +34,6 @@ import oasis.names.tc.wsrp.v1.types.RuntimeContext;
 import oasis.names.tc.wsrp.v1.types.UserContext;
 
 import org.apache.wsrp4j.producer.provider.Provider;
-import org.apache.wsrp4j.producer.provider.sakaiproject.PortletURLProvider;
 import org.apache.wsrp4j.producer.provider.sakaiproject.WSRPDynamicInformationProvider;
 import org.apache.wsrp4j.util.Modes;
 import org.apache.wsrp4j.util.WindowStates;
@@ -75,9 +74,6 @@ public class DynamicInformationProviderImpl implements WSRPDynamicInformationPro
     //mime types
     private String[] mimeTypes = null;
 
-    // PortletURLProvider
-    private PortletURLProvider portletURLProvider = null;
-    
     // indicating that this is a performBlockingInteraction request
     private boolean isAction = false;
     
