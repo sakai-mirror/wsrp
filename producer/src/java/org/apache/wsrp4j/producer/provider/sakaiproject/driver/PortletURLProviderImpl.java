@@ -163,7 +163,7 @@ public abstract class PortletURLProviderImpl implements PortletURLProvider
         return (hostPort + request.getContextPath() + request.getServletPath() + "/" + url);
     }
     
-    public static String getRelativeURL(String url, HttpServletRequest request)
+    static String getRelativeURL(String url, HttpServletRequest request)
     {
         // Ensure that the URL is not an absolute URL to an external resouce, in which case,
         // we return it as is! We test for protocol schemes that do not contain :// first

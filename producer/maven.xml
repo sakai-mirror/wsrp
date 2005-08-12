@@ -15,11 +15,8 @@
     <ant:property name="maven.tomcat.port" value="8080"/>
     <ant:property name="webinf.dir" value="${maven.build.dir}/${pom.artifactId}/WEB-INF/"/>
 
-    <ant:echo message="Replacing @HOME@ with ${maven.tomcat.home}"/>
-    <ant:echo message="Replacing @HTTPPORT@ with ${maven.tomcat.port}"/>
-    
+    <ant:echo message="Replacing @HOME@ with ${maven.tomcat.home}"/>    
     <ant:replace file="${webinf.dir}/classes/wsrp4j-logger.properties"          token="@HOME@"     value="${maven.tomcat.home}"/>     
-    <ant:replace file="${webinf.dir}/config/services/ConfigService.properties"  token="@HTTPPORT@" value="${maven.tomcat.port}"/>
   </goal>
 
 </project>
