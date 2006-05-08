@@ -9,7 +9,7 @@ import org.apache.wsrp4j.log.Logger;
 import org.apache.wsrp4j.producer.provider.URLComposer;
 import org.apache.wsrp4j.util.Modes;
 import org.apache.wsrp4j.util.WindowStates;
-import org.sakaiproject.api.kernel.tool.ToolURL;
+import org.sakaiproject.tool.api.ToolURL;
 
 /**
  * @author <a href="mailto:vgoenka@sungardsct.com">Vishal Goenka</a>

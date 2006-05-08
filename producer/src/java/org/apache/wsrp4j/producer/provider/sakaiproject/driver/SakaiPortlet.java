@@ -27,15 +27,15 @@ import org.apache.wsrp4j.producer.provider.PortletState;
 import org.apache.wsrp4j.producer.provider.ProducerOfferedPortlet;
 import org.apache.wsrp4j.util.Constants;
 import org.apache.wsrp4j.util.Utility;
-import org.sakaiproject.api.kernel.id.cover.IdManager;
-import org.sakaiproject.api.kernel.session.ContextSession;
-import org.sakaiproject.api.kernel.session.Session;
-import org.sakaiproject.api.kernel.session.cover.SessionManager;
-import org.sakaiproject.api.kernel.tool.ActiveTool;
-import org.sakaiproject.api.kernel.tool.Placement;
-import org.sakaiproject.api.kernel.tool.Tool;
-import org.sakaiproject.api.kernel.tool.ToolException;
-import org.sakaiproject.service.legacy.site.ToolConfiguration;
+import org.sakaiproject.id.cover.IdManager;
+import org.sakaiproject.tool.api.ContextSession;
+import org.sakaiproject.tool.api.Session;
+import org.sakaiproject.tool.cover.SessionManager;
+import org.sakaiproject.tool.api.ActiveTool;
+import org.sakaiproject.tool.api.Placement;
+import org.sakaiproject.tool.api.Tool;
+import org.sakaiproject.tool.api.ToolException;
+import org.sakaiproject.site.api.ToolConfiguration;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Text;
@@ -234,6 +234,7 @@ public abstract class SakaiPortlet implements Portlet {
             {
             	p = new org.sakaiproject.util.Placement(
                         IdManager.createUuid(), 
+			tool.getId(),				// Added for 2.2
                         tool, 
                         getConfiguration(false), 
                         defaultContext, 

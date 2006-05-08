@@ -17,8 +17,8 @@ import org.apache.wsrp4j.log.LogManager;
 import org.apache.wsrp4j.log.Logger;
 import org.apache.wsrp4j.producer.provider.PortletSessionManager;
 import org.apache.wsrp4j.producer.provider.Provider;
-import org.sakaiproject.api.kernel.session.Session;
-import org.sakaiproject.api.kernel.session.cover.SessionManager;
+import org.sakaiproject.tool.api.Session;
+import org.sakaiproject.tool.cover.SessionManager;
 
 
 /**

@@ -5,8 +5,8 @@ package org.apache.wsrp4j.producer.provider.sakaiproject.driver;
 
 import javax.servlet.http.HttpServletRequest;
 
-import org.sakaiproject.api.kernel.tool.ToolURL;
-import org.sakaiproject.api.kernel.tool.ToolURLManager;
+import org.sakaiproject.tool.api.ToolURL;
+import org.sakaiproject.tool.api.ToolURLManager;
 
 /**
  * This is a default implementation of the ToolURLManager and it comes with a default implementation

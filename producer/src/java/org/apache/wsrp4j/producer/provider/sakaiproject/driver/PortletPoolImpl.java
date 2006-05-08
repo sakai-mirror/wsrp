@@ -38,12 +38,12 @@ import org.apache.wsrp4j.producer.provider.PortletPool;
 import org.apache.wsrp4j.producer.provider.ProducerOfferedPortlet;
 import org.apache.wsrp4j.producer.provider.Provider;
 import org.apache.wsrp4j.util.HandleGenerator;
-import org.sakaiproject.api.kernel.tool.ActiveTool;
-import org.sakaiproject.api.kernel.tool.Tool;
-import org.sakaiproject.api.kernel.tool.cover.ActiveToolManager;
-import org.sakaiproject.api.kernel.tool.cover.ToolManager;
-import org.sakaiproject.service.legacy.site.ToolConfiguration;
-import org.sakaiproject.service.legacy.site.cover.SiteService;
+import org.sakaiproject.tool.api.ActiveTool;
+import org.sakaiproject.tool.api.Tool;
+import org.sakaiproject.tool.cover.ActiveToolManager;
+import org.sakaiproject.tool.cover.ToolManager;
+import org.sakaiproject.site.api.ToolConfiguration;
+import org.sakaiproject.site.cover.SiteService;
 
 /**
  * <p>
